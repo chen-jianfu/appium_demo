@@ -36,6 +36,12 @@ public class BasicTestCase {
         driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         helper = new Helper(driver);
         pageManager = new PageManager(helper);
+        pageManager.getPageCommon().goToMySettings();
+        if ("aotu12345aotu".equals(pageManager.getPageMySettings().getNickName())){
+            pageManager.getPageMySettings().clickSettingsBtn();
+            pageManager.getPageSettings().clickLogoutBtn();
+        }
+        pageManager.getPageCommon().goToHomeTab();
     }
 
     @AfterMethod

@@ -3,6 +3,7 @@ package appium.common;
 import appium.pages.PageCommon;
 import appium.pages.PageLogin;
 import appium.pages.PageMySettings;
+import appium.pages.PageSettings;
 
 /**
  * Created by Jeff on 2017/10/31.
@@ -12,6 +13,7 @@ public class PageManager {
     private PageCommon pageCommon;
     private PageLogin pageLogin;
     private PageMySettings pageMySettings;
+    private PageSettings pageSettings;
 
     public PageManager(Helper helper){
         this.helper = helper;
@@ -36,5 +38,12 @@ public class PageManager {
             pageMySettings = new PageMySettings(helper);
         }
         return pageMySettings;
+    }
+
+    public PageSettings getPageSettings(){
+        if (pageMySettings == null){
+            pageMySettings = new PageMySettings(helper);
+        }
+        return pageSettings;
     }
 }
