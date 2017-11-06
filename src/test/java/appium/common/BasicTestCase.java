@@ -32,6 +32,7 @@ public class BasicTestCase {
         //设置启动类的信息，这个信息可以通过aapt dump bading apkname来获得
         capabilities.setCapability("appActivity", ".AppStart");//不同APP需要更改
         capabilities.setCapability("unicodeKeyboard",true);
+        capabilities.setCapability("noReset",true);
         //初始化AppiumDriver
         driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         helper = new Helper(driver);

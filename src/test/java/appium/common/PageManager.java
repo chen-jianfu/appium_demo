@@ -41,8 +41,8 @@ public class PageManager {
     }
 
     public PageSettings getPageSettings(){
-        if (pageMySettings == null){
-            pageMySettings = new PageMySettings(helper);
+        if (pageSettings == null){
+            pageSettings = new PageSettings(helper);
         }
         return pageSettings;
     }
