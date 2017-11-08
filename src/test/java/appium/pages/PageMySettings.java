@@ -44,6 +44,10 @@ public class PageMySettings {
     public WebElement getNickNameTextView(){
         return helper.findById("net.oschina.app:id/tv_nick");
     }
+
+    public WebElement getfavoritesLayout(){
+        return helper.findById("net.oschina.app:id/ly_favorite");
+    }
 /**
  * 控件的操作
  */
@@ -69,6 +73,10 @@ public class PageMySettings {
 
     public void clickMyTeamItem(){
         helper.click(getMyTeamItem());
+    }
+
+    public void clickFavoritesLayout(){
+        helper.click(getfavoritesLayout());
     }
 
     public String getNickName(){

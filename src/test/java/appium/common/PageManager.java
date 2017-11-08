@@ -1,9 +1,6 @@
 package appium.common;
 
-import appium.pages.PageCommon;
-import appium.pages.PageLogin;
-import appium.pages.PageMySettings;
-import appium.pages.PageSettings;
+import appium.pages.*;
 
 /**
  * Created by Jeff on 2017/10/31.
@@ -14,6 +11,10 @@ public class PageManager {
     private PageLogin pageLogin;
     private PageMySettings pageMySettings;
     private PageSettings pageSettings;
+    private PageAbout pageAbout;
+    private PageHome pageHome;
+    private PageNewsDetail pageNewsDetail;
+    private PageUserFavoriteList pageUserFavoriteList;
 
     public PageManager(Helper helper){
         this.helper = helper;
@@ -45,5 +46,33 @@ public class PageManager {
             pageSettings = new PageSettings(helper);
         }
         return pageSettings;
+    }
+
+    public PageAbout getPageAbout(){
+        if (pageAbout == null){
+            pageAbout = new PageAbout(helper);
+        }
+        return pageAbout;
+    }
+
+    public PageHome getPageHome() {
+        if (pageHome == null){
+            pageHome = new PageHome(helper);
+        }
+        return pageHome;
+    }
+
+    public PageNewsDetail getPageNewsDetail() {
+        if (pageNewsDetail == null){
+            pageNewsDetail = new PageNewsDetail(helper);
+        }
+        return pageNewsDetail;
+    }
+
+    public PageUserFavoriteList getPageUserFavoriteList() {
+        if (pageUserFavoriteList == null){
+            pageUserFavoriteList = new PageUserFavoriteList(helper);
+        }
+        return pageUserFavoriteList;
     }
 }

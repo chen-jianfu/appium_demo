@@ -17,7 +17,17 @@ public class PageSettings {
         return helper.findById("net.oschina.app:id/rl_cancle");
     }
 
+    public WebElement getAboutUs(){
+        return helper.findById("net.oschina.app:id/rl_about");
+    }
+
     public void clickLogoutBtn(){
         helper.click(getLogoutBtn());
     }
+
+    public void clickAboutUs(){
+        helper.click(getAboutUs());
+    }
+
+
 }

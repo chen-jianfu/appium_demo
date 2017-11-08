@@ -49,7 +49,7 @@ public class PageCommon {
         helper.click(getPublishBtn());
     }
 
-    public void goToMySettings(){
+    public void goToMySettingsTab(){
         helper.click(getMySettingsTab());
     }
 }

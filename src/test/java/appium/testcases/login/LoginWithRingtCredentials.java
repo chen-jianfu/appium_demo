@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class LoginWithRingtCredentials extends BasicTestCase{
     @Test
     public void testSucessfullyLogin() throws Exception {
-        pageManager.getPageCommon().goToMySettings();
+        pageManager.getPageCommon().goToMySettingsTab();
         pageManager.getPageMySettings().clickLoginIcon();
         pageManager.getPageLogin().login("735723619@qq.com","12345678");
         Assert.assertEquals(pageManager.getPageMySettings().getNickName(),"aotu12345aotu");

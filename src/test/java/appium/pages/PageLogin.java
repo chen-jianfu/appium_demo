@@ -29,6 +29,10 @@ public class PageLogin {
         return helper.findById("net.oschina.app:id/btn_login");
     }
 
+    public WebElement getBackBtn(){
+        return helper.findByClassName("android.widget.ImageButton",1);
+    }
+
     public void enterName(String name){
         helper.enterText(getNameEditText(),name);
     }
@@ -53,5 +57,17 @@ public class PageLogin {
         helper.enterTextWithPreClear(getNameEditText(),name);
         helper.enterTextWithPreClear(getPwdEditText(),pwd);
         helper.click(getLoginBtn());
+    }
+
+    public boolean isLoginPape(){
+        boolean result = true;
+        if (getNameEditText().isDisplayed() & getNameEditText().isEnabled()){
+            return true;
+        }
+        return result;
+    }
+
+    public void clickBackImageButton(){
+        helper.click(getBackBtn());
     }
 }
