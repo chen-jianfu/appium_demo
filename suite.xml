@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Default Suite">
+    <listeners>
+        <listener class-name="appium.listeners.TestListener"/>
+        <listener class-name="appium.listeners.ReRunListener"/>
+    </listeners>
     <test name="appium_demo">
         <classes>
-            <class name="appium.testcases.login.LoginStatusCheck"/>
-            <class name="appium.testcases.login.LoginWithRingtCredentials"/>
+            <!--<class name="appium.testcases.login.LoginStatusCheck"/>-->
+            <!--<class name="appium.testcases.login.LoginWithRingtCredentials"/>-->
             <class name="appium.testcases.versioncheck.VersionCheck"/>
 
         </classes>

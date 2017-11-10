@@ -14,7 +14,7 @@ import java.net.URL;
  * Created by Jeff on 2017/10/30.
  */
 public class BasicTestCase {
-    private AppiumDriver driver;
+    public static AppiumDriver driver;
     private Helper helper;
     public PageManager pageManager;
     @BeforeMethod
