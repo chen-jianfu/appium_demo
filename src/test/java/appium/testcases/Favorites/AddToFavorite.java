@@ -5,6 +5,8 @@ import appium.common.Helper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by Jeff on 2017/11/8.
  */
@@ -25,6 +27,7 @@ public class AddToFavorite extends BasicTestCase {
         pageManager.getPageMySettings().clickFavoritesLayout();
         Thread.sleep(1000);
         System.out.println(pageManager.getPageUserFavoriteList().getFavoritisTitle(1)+"111111111111111");
-        Assert.assertEquals(pageManager.getPageUserFavoriteList().getFavoritisTitle(1),expectedNewsTitle);
+        //Assert.assertEquals(pageManager.getPageUserFavoriteList().getFavoritisTitle(1),expectedNewsTitle);
+        assertTrue(expectedNewsTitle.contains(pageManager.getPageUserFavoriteList().getFavoritisTitle(1)));
     }
 }

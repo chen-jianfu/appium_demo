@@ -78,4 +78,8 @@ public class Helper {
         System.out.println("获取控件文本");
         return element.getText();
     }
+
+    public void goBack(){
+        driver.navigate().back();
+    }
 }

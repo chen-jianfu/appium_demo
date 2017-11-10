@@ -52,4 +52,8 @@ public class PageCommon {
     public void goToMySettingsTab(){
         helper.click(getMySettingsTab());
     }
+
+    public void goBack(){
+        helper.goBack();
+    }
 }

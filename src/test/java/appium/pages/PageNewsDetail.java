@@ -29,6 +29,10 @@ public class PageNewsDetail {
         return helper.findById("net.oschina.app:id/ly_share_weichat_circle");
     }
 
+    public WebElement getShareToQQBtn(){
+        return helper.findById("net.oschina.app:id/ly_share_qq");
+    }
+
     public void clickBackImageButton(){
         helper.click(getBackBtn());
     }
@@ -43,5 +47,9 @@ public class PageNewsDetail {
 
     public void clickShareToWechatGroup(){
         helper.click(getShareWechatGroup());
+    }
+
+    public void clickShareToQQ(){
+        helper.click(getShareToQQBtn());
     }
 }

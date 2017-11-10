@@ -15,6 +15,7 @@ public class PageManager {
     private PageHome pageHome;
     private PageNewsDetail pageNewsDetail;
     private PageUserFavoriteList pageUserFavoriteList;
+    private PageQQ pageQQ;
 
     public PageManager(Helper helper){
         this.helper = helper;
@@ -74,5 +75,12 @@ public class PageManager {
             pageUserFavoriteList = new PageUserFavoriteList(helper);
         }
         return pageUserFavoriteList;
+    }
+
+    public PageQQ getPageQQ() {
+        if(pageQQ == null){
+            pageQQ = new PageQQ(helper);
+        }
+        return pageQQ;
     }
 }
